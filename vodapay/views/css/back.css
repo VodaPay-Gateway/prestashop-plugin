@@ -1,0 +1,65 @@
+
+#content .tab-pane:first-child .panel {
+    border-top-left-radius: 0;
+}
+
+.vodapay-header .text-branded,
+.vodapay-content .text-branded {
+    color: #00aff0;
+}
+
+.vodapay-header h4,
+.vodapay-content h4,
+.vodapay-content h5 {
+    margin: 2px 0;
+    color: #00aff0;
+    font-size: 1.8em;
+}
+
+.vodapay-header h4 {
+    margin-top: 5px;
+}
+
+.vodapay-header .col-md-6 {
+    margin-top: 18px;
+}
+
+.vodapay-content h4 {
+    margin-bottom: 10px;
+}
+
+.vodapay-content h5 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.vodapay-content h6 {
+    font-size: 1.3em;
+    margin: 1px 0 4px 0;
+}
+
+.vodapay-header > .col-md-4 {
+    height: 65px;
+    vertical-align: middle;
+    border-left: 1px solid #ddd;
+}
+
+.vodapay-header > .col-md-4:first-child {
+    border-left: none;
+}
+
+.vodapay-header #create-account-btn {
+    margin-top: 14px;
+}
+
+.vodapay-content dd + dt {
+    margin-top: 5px;
+}
+
+.vodapay-content ul {
+    padding-left: 15px;
+}
+
+.vodapay-content .ul-spaced li {
+    margin-bottom: 5px;
+}
