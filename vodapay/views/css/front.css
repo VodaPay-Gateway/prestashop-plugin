@@ -1,0 +1,23 @@
+
+#vodapay_payment_button a {
+    padding: 10px;
+    background-color: #FBFBFB;
+}
+
+#vodapay_payment_button a:hover {
+    background-color: #f6f6f6;
+}
+
+#vodapay_payment_button a:after {
+    display: block;
+    content: "\f054";
+    position: absolute;
+    right: 15px;
+    margin-top: -11px;
+    top: 50%;
+    font-family: "FontAwesome", sans-serif;
+    font-size: 25px;
+    height: 22px;
+    width: 14px;
+    color: #777777;
+}

@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'vodapay/vodapay',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'fca7fd59a21a88499548b474577ed78dd456def5',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'megastruktur/phone-country-codes' => array(
+            'pretty_version' => '0.4',
+            'version' => '0.4.0.0',
+            'reference' => '9d396143a73b08c0109053cf0c1cccdf8f78cfc1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../megastruktur/phone-country-codes',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'ngenius/ngenius-common' => array(
+            'pretty_version' => 'v1.0.12',
+            'version' => '1.0.12.0',
+            'reference' => 'fcf6b32e6e8946f86ca87d7955d3d4b56d8f372e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ngenius/ngenius-common',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'vodapay/vodapay' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'fca7fd59a21a88499548b474577ed78dd456def5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

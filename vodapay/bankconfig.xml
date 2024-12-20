@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>VodaPay Digital Payment Gateway</name>
+    <displayName>VodaPay Digital Payment Gateway</displayName>
+    <description>Accept payments via VodaPay Digital Payment Gateway.</description>
+    <orderStatus>VODAPAY</orderStatus>
+    <orderStatusLabel>VodaPay</orderStatusLabel>
+    <sandboxApiUrl>https://api-gateway.sandbox.vodapaygateway.vodacom.co.za</sandboxApiUrl>
+    <liveApiUrl>https://api-gateway.vodapaygateway.vodacom.co.za</liveApiUrl>
+</module>

@@ -1,0 +1,21 @@
+{
+  "name": "vodapay/vodapay",
+  "description": "Hosted Payment Page with simple, secure and PCI DSS compliant.",
+  "authors": [
+    {
+      "name": "VodaPay"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "VodaPay\\": "classes/"
+    },
+    "config": {
+      "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+  },
+  "require": {
+    "ngenius/ngenius-common": "v1.0.12"
+  }
+}
