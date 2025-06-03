@@ -35,6 +35,8 @@ class PurchaseRequest extends AbstractRequest
                 'merchantAttributes'     => [
                     'redirectUrl'          => $order['merchantAttributes']['redirectUrl'],
                     'skipConfirmationPage' => true,
+                    'cancelUrl'            => $order['merchantAttributes']['redirectUrl'],
+                    'cancelText'           => 'Continue Shopping'
                 ],
                 'billingAddress'         => [
                     'firstName'   => $order['billingAddress']['firstName'],

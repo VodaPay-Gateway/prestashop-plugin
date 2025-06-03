@@ -21,7 +21,7 @@ class VodaPay extends PaymentModule
         $config              = new Config();
         $this->name          = 'vodapay';
         $this->tab           = 'payments_gateways';
-        $this->version       = '1.1.1';
+        $this->version       = '1.2.0';
         $this->author        = 'VodaPay';
         $this->need_instance = 1;
 
@@ -612,7 +612,7 @@ class VodaPay extends PaymentModule
             }
 
             // Hide refund button
-            if ($vodaPayOrder['amount'] === $vodaPayOrder['refunded_amt']) {
+            if ($vodaPayOrder['amount'] === $vodaPayOrder['refunded_amt'] || $vodaPayOrder['status'] === $config->getOrderStatus() . '_AUTH_REVERSED') {
                 $hideRefundBtn = true;
             }
 

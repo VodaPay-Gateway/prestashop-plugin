@@ -56,8 +56,11 @@ class VodaPayRedirectModuleFrontController extends ModuleFrontController
             $command::deleteVodaPayOrder($cart_id);
             $log['redirected_to'] = 'module/vodapay/failedorder';
             $logger->addLog($log);
+            $status = ('STARTED' == $orderState) ? 'Cancelled' : 'Declined';
             /** @noinspection PhpUndefinedConstantInspection */
-            Tools::redirect(\Tools::getHttpHost(true) . __PS_BASE_URI__ . 'module/vodapay/failedorder');
+            Tools::redirect(
+                \Tools::getHttpHost(true) . __PS_BASE_URI__ . 'module/vodapay/failedorder?status=' . urlencode($status)
+            );
         }
 
         if (!Order::getByCartId($cart_id)) {

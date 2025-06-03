@@ -1,5 +1,15 @@
 # Changelog
 
+## [[1.2.0]](https://github.com/VodaPay-Gateway/prestashop-plugin/releases/tag/1.2.0)
+
+### Added
+
+- Introduced a Continue Shopping button for improved user navigation.
+
+### Fixed
+
+- Resolved an issue where the Refund button was incorrectly displayed after voiding a transaction.
+
 ## [[1.1.1]](https://github.com/VodaPay-Gateway/prestashop-plugin/releases/tag/1.1.1)
 
 ### Fixed

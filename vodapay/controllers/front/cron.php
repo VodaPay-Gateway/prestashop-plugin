@@ -94,30 +94,27 @@ class VodaPayCronModuleFrontController extends VodaPayRedirectModuleFrontControl
                 $response = json_decode(json_encode($response), true);
 
                 // Check if the response contains an error message and code
-                if (isset($response['message']) && isset($response['code'])) {
-                    if (isset($response['code']) == 404 || isset($response['errors'])) {
-                        throw new Exception("Error " . $response['code'] . ": " . $response['message']);
-                    }
+                if (isset($response['code']) == 404 || isset($response['errors'])) {
+                    throw new Exception("Error " . $response['code'] . ": " . $response['message']);
+                }
 
-                    if ($response && isset($response['_embedded']['payment']) && is_array(
-                            $response['_embedded']['payment']
-                        )) {
-                        $apiProcessor = new ApiProcessor($response);
+                if ($response && isset($response['_embedded']['payment']) && is_array(
+                        $response['_embedded']['payment']
+                    )) {
+                    $apiProcessor = new ApiProcessor($response);
 
-                        if ($this->processOrder($apiProcessor, $vodaPayOrder, true)) {
-                            $cronLogger->addLog("VODAPAY: State is " . $vodaPayOrder['state']);
-                            $cronLogger->addLog(json_encode($this->getVodaPayOrder($vodaPayOrder['reference'])));
-                        } else {
-                            $cronLogger->addLog('VODAPAY: Failed to process order');
-                        }
+                    if ($this->processOrder($apiProcessor, $vodaPayOrder, true)) {
+                        $cronLogger->addLog("VODAPAY: State is " . $vodaPayOrder['state']);
+                        $cronLogger->addLog(json_encode($this->getVodaPayOrder($vodaPayOrder['reference'])));
                     } else {
-                        $cronLogger->addLog("VODAPAY: Payment result not found");
+                        $cronLogger->addLog('VODAPAY: Failed to process order');
                     }
+                } else {
+                    $cronLogger->addLog("VODAPAY: Payment result not found");
                 }
-            catch
-                (Exception $exception) {
-                    $cronLogger->addLog("VODAPAY: Exception " . $exception->getMessage());
-                }
+            } catch (Exception $exception) {
+                $cronLogger->addLog("VODAPAY: Exception " . $exception->getMessage());
+            }
 
             $counter++;
         }
@@ -126,4 +123,4 @@ class VodaPayCronModuleFrontController extends VodaPayRedirectModuleFrontControl
 
         return true;
     }
-    }
+}
