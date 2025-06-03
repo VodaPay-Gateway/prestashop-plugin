@@ -76,17 +76,17 @@
 
   // Function to hide or show the button based on the value of hideButton
   function toggleButtonVisibility() {
-    var button = document.getElementById('refund-button');
-    var refundInput = document.getElementById('refund-input');
+    var button = document.getElementById('refund-button')
+    var refundInput = document.getElementById('refund-input')
     if (hideRefundBtn) {
-      button.style.display = 'none'; // Hide the button
-      refundInput.style.display = 'none';
+      button.style.display = 'none' // Hide the button
+      refundInput.style.display = 'none'
     } else {
-      button.style.display = 'block'; // Show the button
-      refundInput.style.display = 'block';
+      button.style.display = 'block' // Show the button
+      refundInput.style.display = 'block'
     }
   }
 
   // Call the function to initially set the button visibility
-  toggleButtonVisibility();
+  toggleButtonVisibility()
 </script>
